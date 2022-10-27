@@ -6,8 +6,10 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
 
 @NgModule({
@@ -20,7 +22,13 @@ import { UserComponent } from './user/user.component';
     HeaderComponent,
     ForbiddenComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
